@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{31EFBD02-1FCC-4EC6-A7F3-5A04BE4AE806}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QuickVersion</RootNamespace>
+    <AssemblyName>QuickVersion</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>Key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SharpShell, Version=2.6.0.0, Culture=neutral, PublicKeyToken=f14dc899472fe6fb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Tools\SharpShell.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ContextMenu.cs" />
+    <Compile Include="Extensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Key.snk" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\Blue\Blue16.png" />
+    <Content Include="Resources\Green\Green16.png" />
+    <Content Include="Resources\Purple\Purple16.png" />
+    <Content Include="Resources\Red\Red16.png" />
+    <Content Include="Resources\Yellow\Yellow16.png" />
+    <Content Include="Resources\Blue\Blue20.png" />
+    <Content Include="Resources\Green\Green20.png" />
+    <Content Include="Resources\Purple\Purple20.png" />
+    <Content Include="Resources\Red\Red20.png" />
+    <Content Include="Resources\Yellow\Yellow20.png" />
+    <Content Include="Resources\Blue\Blue24.png" />
+    <Content Include="Resources\Green\Green24.png" />
+    <Content Include="Resources\Purple\Purple24.png" />
+    <Content Include="Resources\Red\Red24.png" />
+    <Content Include="Resources\Yellow\Yellow24.png" />
+    <Content Include="Resources\Blue\Blue28.png" />
+    <Content Include="Resources\Green\Green28.png" />
+    <Content Include="Resources\Purple\Purple28.png" />
+    <Content Include="Resources\Red\Red28.png" />
+    <Content Include="Resources\Yellow\Yellow28.png" />
+    <Content Include="Resources\Blue\Blue32.png" />
+    <Content Include="Resources\Green\Green32.png" />
+    <Content Include="Resources\Purple\Purple32.png" />
+    <Content Include="Resources\Red\Red32.png" />
+    <Content Include="Resources\Yellow\Yellow32.png" />
+    <Content Include="Resources\Blue\Blue36.png" />
+    <Content Include="Resources\Green\Green36.png" />
+    <Content Include="Resources\Purple\Purple36.png" />
+    <Content Include="Resources\Red\Red36.png" />
+    <Content Include="Resources\Yellow\Yellow36.png" />
+    <Content Include="Resources\Blue\Blue40.png" />
+    <Content Include="Resources\Green\Green40.png" />
+    <Content Include="Resources\Purple\Purple40.png" />
+    <Content Include="Resources\Red\Red40.png" />
+    <Content Include="Resources\Yellow\Yellow40.png" />
+    <Content Include="Resources\Blue\Blue.ico" />
+    <Content Include="Resources\Green\Green.ico" />
+    <Content Include="Resources\Purple\Purple.ico" />
+    <Content Include="Resources\Red\Red.ico" />
+    <Content Include="Resources\Yellow\Yellow.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
